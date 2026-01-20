@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {Header} from './web-site/components/header/header';
+import {WebSite} from './web-site/web-site';
 
 @Component({
   selector: 'app-main-root',
   imports: [
-    Header
+    WebSite
   ],
   templateUrl: './main-root.html',
   styleUrl: './main-root.scss',
