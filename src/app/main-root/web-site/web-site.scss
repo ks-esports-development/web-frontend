@@ -20,6 +20,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-image: url('../../../assets/images/test-background.png');
+    border-bottom: 2px solid var(--primary);
 
     .background-overlay {
       position: absolute;
@@ -28,6 +29,80 @@
       width: 100%;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: start;
+      align-items: center;
     }
+  }
+}
+
+/* Section 1. Welcome */
+.welcome-container {
+  width: 45%;
+  min-width: 600px;
+  height: 400px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 18px;
+  flex-direction: column;
+
+  h2 {
+    font-weight: 800;
+    font-size: 60px;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .button-container {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+
+    button {
+      width: 180px;
+      height: 60px;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+      transition: all .3s;
+
+      &:hover {
+        animation: pulse 1s ease-in-out infinite;
+      }
+    }
+
+    .primary-btn {
+      background: var(--primary);
+    }
+
+    .secondary-btn {
+      background: transparent;
+      border: 2px solid var(--text);
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.075);
+  }
+  100% {
+    transform: scale(1.0);
   }
 }
