@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="header-overlay"></div>
+
+  <div class="page-container header-inner">
+    <!-- Left: Logo / Brand -->
+    <a class="brand" routerLink="/">
+      <span class="brand-name">KS ESPORTS</span>
+    </a>
+
+    <!-- Center: Nav -->
+    <nav class="nav" aria-label="Main navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">HOME</a>
+      <a routerLink="/team" routerLinkActive="active">TEAMS</a>
+      <a routerLink="/partners" routerLinkActive="active">TOURNAMENTS</a>
+      <a routerLink="/shop" routerLinkActive="active">1. LIGA</a>
+    </nav>
+
+    <!-- Right: Actions -->
+    <div class="actions">
+      <a class="cta" routerLink="/login">ANMELDEN</a>
+    </div>
+  </div>
+</header>

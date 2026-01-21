@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use './colors' as *;
+
+$theme-light: (
+  background: $white,
+  surface: $gray-50,
+  border: $gray-200,
+  text: $gray-800,
+  text-muted: $gray-600,
+  primary: $primary-600,
+);
+
+$theme-dark: (
+  background: $gray-900,
+  surface: $gray-800,
+  border: $gray-700,
+  text: $gray-50,
+  text-muted: $gray-300,
+  primary: $primary-500,
+);
+
+@function theme($map_, $key_) {
+  @return map.get($map_, $key_);
+}
+
+@mixin emit-theme-vars($map) {
+  --bg: #{theme($map, background)};
+  --surface: #{theme($map, surface)};
+  --border: #{theme($map, border)};
+  --text: #{theme($map, text)};
+  --text-muted: #{theme($map, text-muted)};
+  --primary: #{theme($map, primary)};
+}
